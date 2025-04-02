@@ -44,7 +44,7 @@ Fragment starting at index 125, ending at index 162 (exclusive) is not a link:
 ## Build / Compilation
 
 This project should be compatible with any version of Java that is not _ancient_. It _should_ be compatible with 
-Java 1.4, but to circumvent some issues with modern build tooling, its project descriptor defines 1.7.
+Java 1.4, but to circumvent some issues with modern build tooling, its project descriptor defines 1.8.
 
 The project can be built using standard [Maven](https://maven.apache.org/) invocations, like this:
 
