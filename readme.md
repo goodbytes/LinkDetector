@@ -1,10 +1,15 @@
 # LinkDetector
 
-A Java utility that lets you detect where in a text links begin and end.
+A Java utility that lets you detect where in plain text a hyperlink begins and ends.
 
 Correctly identifying the start and end location of a link in text can be tricky, especially when those links either 
-_include_ or are _surrounded by_ parenthesis, followed by a comma, and so on. This implementation intends to simplify
-that effort.
+_include_ or are _surrounded by_ parenthesis, followed by a comma, and so on:
+- `https://example.org/foo,` instead of `https://example.org/foo` (from a text like `... on https://example.org/foo, where ...`).
+- `https://example.org/foo)` instead of `https://example.org/foo` (from a text like `... the webpage (https://example.org/foo) where ...` ).
+
+These often lead to browsers being opened to invalid URLs, causing end-users to see 404 pages or other errors.
+
+This project simplifies parsing the correct start and end of links in text, which helps avoid such issues.
 
 ## Usage
 
