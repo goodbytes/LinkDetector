@@ -32,6 +32,12 @@
         </developer>
     </developers>
 
+    <scm>
+        <connection>https://github.com/goodbytes/LinkDetector.git</connection>
+        <developerConnection>https://github.com/goodbytes/LinkDetector.git</developerConnection>
+        <url>https://github.com/goodbytes/LinkDetector</url>
+    </scm>
+
     <licenses>
         <license>
             <name>Apache-2.0</name>
