@@ -87,6 +87,23 @@ public class LinkDetectorTest
     }
 
     @Test
+    public void testCaseSensitivity() throws Exception
+    {
+        // Setup test fixture.
+        final String input = "HTTPS://www.example.org";
+
+        // Execute system under test.
+        final List<Fragment> fragments = LinkDetector.parse(input);
+
+        // Verify results.
+        assertEquals(1, fragments.size());
+        assertEquals(0, fragments.get(0).startIndex());
+        assertEquals(input.length(), fragments.get(0).endIndex());
+        assertEquals(input, fragments.get(0).toString());
+        assertTrue(fragments.get(0).isLink());
+    }
+
+    @Test
     public void testEmbeddedLink() throws Exception
     {
         // Setup test fixture.
