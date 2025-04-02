@@ -6,7 +6,7 @@
 
     <groupId>nl.goodbytes.util</groupId>
     <artifactId>linkdetector</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <name>LinkDetector</name>
     <description>
