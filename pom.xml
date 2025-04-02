@@ -41,4 +41,12 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub GoodBytes LinkDetector Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/goodbytes/linkdetector</url>
+        </repository>
+    </distributionManagement>
+
 </project>

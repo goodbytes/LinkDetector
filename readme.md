@@ -8,8 +8,29 @@ that effort.
 
 ## Usage
 
-To use the utility, invoke the `parse` method of the `LinkDetector` class, as shown below. This will split up the text
-in fragments (returned in a list). For each fragment, a start and end index is provided, and defines if it does or does
+The distributable is available through the Maven repository that is provided by GitHub Packages. To set it up, define
+the repository in your `pom.xml` file like so:
+
+```xml
+<repository>
+    <id>github</id>
+    <name>GitHub GoodBytes LinkDetector Apache Maven Packages</name>
+    <url>https://maven.pkg.github.com/goodbytes/linkdetector</url>
+</repository>
+```
+
+You can then define this project to be a dependency of your project, like so:
+
+```xml
+<dependency>
+    <groupId>nl.goodbytes.util</groupId>
+    <artifactId>linkdetector</artifactId>
+    <version>1.0.0</version> <!-- Please remember to check if this is the latest, as this example could be outdated. -->
+</dependency>
+```
+
+To use the utility in your code, invoke the `parse` method of the `LinkDetector` class, as shown below. This will split
+up the text in fragments (returned in a list). For each fragment, a start and end index is provided, and defines if it does or does
 not represent a link.
 
 ```java
