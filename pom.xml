@@ -14,6 +14,7 @@
         start and end location of a link in text can be tricky, especially when those links either include or are
         surrounded by parenthesis, followed by a comma, and so on. This implementation intends to simplify that effort.
     </description>
+    <url>https://github.com/goodbytes/LinkDetector</url>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
