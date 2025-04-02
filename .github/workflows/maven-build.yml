@@ -1,0 +1,30 @@
+name: Maven Build & Test
+
+on: [pull_request]
+
+permissions:
+  checks: write
+
+jobs:
+  build-java:
+    name: Build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: [ 8, 11, 17, 21 ]
+        distribution: [ temurin ] # We could add more here: temurin, adopt, liberica, microsoft, corretto
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK ${{ matrix.java }} ${{ matrix.distribution }}
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ matrix.java }}
+          distribution: ${{ matrix.distribution }}
+          cache: maven
+      - name: Build with Maven
+        run: mvn --batch-mode --update-snapshots verify
+      - name: Publish Test Report
+        uses: mikepenz/action-junit-report@v5
+        if: ${{ matrix.java == 8 && (success() || failure()) }}  # always run even if the previous step fails
+        with:
+          report_paths: '**/target/surefire-reports/TEST-*.xml'
