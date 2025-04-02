@@ -104,6 +104,23 @@ public class LinkDetectorTest
     }
 
     @Test
+    public void testRequiredDoubleSlash() throws Exception
+    {
+        // Setup test fixture.
+        final String input = "https:www.example.org";
+
+        // Execute system under test.
+        final List<Fragment> fragments = LinkDetector.parse(input);
+
+        // Verify results.
+        assertEquals(1, fragments.size());
+        assertEquals(0, fragments.get(0).startIndex());
+        assertEquals(input.length(), fragments.get(0).endIndex());
+        assertEquals(input, fragments.get(0).toString());
+        assertFalse(fragments.get(0).isLink());
+    }
+
+    @Test
     public void testEmbeddedLink() throws Exception
     {
         // Setup test fixture.
