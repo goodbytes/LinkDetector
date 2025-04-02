@@ -32,7 +32,7 @@ import java.util.regex.Pattern;
  */
 public class LinkDetector
 {
-    final static Pattern pattern = Pattern.compile("\\b(?:https?|ftp):\\/\\/(([a-z0-9-+&@#\\/%?=~_|!:,.;]*\\([a-z0-9-+&@#\\/%?=~_|!:,.;]*(\\)[a-z0-9-+&@#\\/%?=~_|!:,.;]*[a-z0-9-+&@#\\/%=~_|]|[a-z0-9-+&@#\\/%=~_|)]))|([a-z0-9-+&@#\\/%?=~_|!:,.;]*[a-z0-9-+&@#\\/%=~_|]))", Pattern.CASE_INSENSITIVE | Pattern.MULTILINE);
+    final static Pattern pattern = Pattern.compile("\\b(?:https?|ftp)://(([a-z0-9-+&@#/%?=~_|!:,.;]*\\([a-z0-9-+&@#/%?=~_|!:,.;]*(\\)[a-z0-9-+&@#/%?=~_|!:,.;]*[a-z0-9-+&@#/%=~_|]|[a-z0-9-+&@#/%=~_|)]))|([a-z0-9-+&@#/%?=~_|!:,.;]*[a-z0-9-+&@#/%=~_|]))", Pattern.CASE_INSENSITIVE | Pattern.MULTILINE);
 
     /**
      * Splits the provided input text in fragments that either are or are not links.
