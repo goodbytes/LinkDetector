@@ -8,6 +8,13 @@
     <artifactId>linkdetector</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
+    <name>LinkDetector</name>
+    <description>
+        A Java utility that lets you detect where in a text links begin and end. Correctly identifying the
+        start and end location of a link in text can be tricky, especially when those links either include or are
+        surrounded by parenthesis, followed by a comma, and so on. This implementation intends to simplify that effort.
+    </description>
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
